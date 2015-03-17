@@ -1,47 +1,20 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html>
-<head>
-  <title>Julius Alexander IV</title>
-  
-  <script src="/assets/angularjs/angular.min.js"></script>
-  <script src="/assets/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <script src="/scripts/app.js"></script>
+<div class="home">
 
-  <link rel="stylesheet" type="text/css" href="styles/reset.css">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-  <link rel="stylesheet" href="assets/font-awesome-4.2.0/css/font-awesome.min.css">
+  <h1 class="page-heading">Posts</h1>
 
-</head>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-<body ng-app="website" touch-action="auto" fullbleed unresolved>
-
-  <nav>
-    <ul id="nav-list">
-      <li class="nav-item" id="about"><a class="white-link" ui-sref="about">Who I am</a></li>
-      <li class="nav-item" id="projects"><a class="white-link" ui-sref="projects">What I've done</a></li>
-      <li class="nav-item" id="something"><a class="white-link" ui-sref="something">What I do</a></li>
-    </ul>
-  </nav>
-  
-  <div ui-view></div>
-
-  <footer>
-    <div id="foot-text">
-      &copy <a class="white-link" ui-sref="home">Julius Alexander IV</a> | 
-      This site is a product of knowledge gathered from
-      <a class="white-link" href="http://www.rpi.edu/">Rensselaer Polytechnic Institute</a>
-      and the photography of
-      <a class="white-link" href="http://matt-molloy.artistwebsites.com/">Matt Molloy</a> |
-
-      <a class="dark-blue" href="https://github.com/JuliusAlexanderIV/" target="blank">
-        <i class="fa fa-github-square"></i></a>
-      <a class="dark-blue" href="https://www.linkedin.com/pub/julius-alexander-iv/61/560/95a" target="blank">
-        <i class="fa fa-linkedin-square"></i></a>
-      <a class="dark-blue" href="https://twitter.com/JAlexanderIV" target="blank">
-        <i class="fa fa-twitter-square"></i></a>
-    </div>
-  </footer>
-</body>
-
-</html>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

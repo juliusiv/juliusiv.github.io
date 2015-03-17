@@ -1,0 +1,196 @@
+/**
+ ** Site header
+ */
+.site-header
+  // Positioning context for the mobile navigation icon
+  position: relative
+  background-color: $background-color
+
+.site-title
+  font-size: 26px
+  line-height: 2em
+  letter-spacing: -1px
+  margin-bottom: 0
+  float: left
+  &,
+  &:visited
+    color: $grey-color-dark
+
+.site-nav
+  float: right
+  overflow: hidden
+  height: 100%
+  width: 50%
+  display: table-row
+  ul
+    overflow: hidden
+    margin: 0
+    padding: 0
+    a
+      float: right
+      display: block
+      width: 33%
+      height: 3.5em
+      text-decoration: none
+      vertical-align: middle
+      li
+        margin-top: 1em
+        display: block
+        text-align: center
+        text-decoration: none
+    #about-link-box:hover, #about-link-box:active
+      background-color: $blue-background
+    #interests-link-box:hover, #interests-link-box:active
+      background-color: $red-background
+    #projects-link-box:hover, #projects-link-box:active
+      background-color: $green-background
+
+  .page-link
+    color: $text-color
+    line-height: $base-line-height
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child)
+      margin-left: 20px
+  +media-query($on-palm)
+    position: absolute
+    top: 9px
+    right: 30px
+    background-color: $background-color
+    border: 1px solid $grey-color-light
+    border-radius: 5px
+    text-align: right
+    .menu-icon
+      display: block
+      float: right
+      width: 36px
+      height: 26px
+      line-height: 0
+      padding-top: 10px
+      text-align: center
+      > svg
+        width: 18px
+        height: 15px
+        path
+          fill: $grey-color-dark
+    .trigger
+      clear: both
+      display: none
+    &:hover .trigger
+      display: block
+      padding-bottom: 5px
+    .page-link
+      display: block
+      padding: 5px 10px
+
+/**
+ ** Site footer
+ */
+.site-footer  
+  padding: $spacing-unit 0
+  background-color: $background-color
+
+.footer-heading
+  font-size: 18px
+  margin-bottom: $spacing-unit / 2
+
+.contact-list,
+.social-media-list
+  list-style: none
+  margin-left: 0
+
+.footer-col-wrapper
+  font-size: 15px
+  color: $text-color
+  margin-left: -$spacing-unit / 2
+  @extend %clearfix
+
+.footer-col
+  float: left
+  margin-bottom: $spacing-unit / 2
+  padding-left: $spacing-unit / 2
+
+.footer-col-1
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2))
+  width: calc(30% - (#{$spacing-unit} / 2))
+
+.footer-col-2
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2))
+  width: calc(25% - (#{$spacing-unit} / 2))
+
+.footer-col-3
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2))
+  width: calc(45% - (#{$spacing-unit} / 2))
+
++media-query($on-laptop)
+  .footer-col-1,
+  .footer-col-2
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2))
+    width: calc(50% - (#{$spacing-unit} / 2))
+  .footer-col-3
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2))
+    width: calc(100% - (#{$spacing-unit} / 2))
+
+
++media-query($on-palm)
+  .footer-col
+    float: none
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2))
+    width: calc(100% - (#{$spacing-unit} / 2))
+
+
+/**
+ ** Page content
+ */
+.page-content
+  border-top: 4px solid $border-color
+  border-bottom: 4px solid $border-color
+  padding: $spacing-unit 0
+  background-color: $background-color
+
+.page-heading
+  font-size: 20px
+
+.post-list
+  margin-left: 0
+  list-style: none
+  > li
+    margin-bottom: $spacing-unit
+
+.post-meta
+  font-size: $small-font-size
+  color: $grey-color
+
+.post-link
+  display: block
+  font-size: 24px
+
+/**
+ ** Posts
+ */
+.post-header
+  margin-bottom: $spacing-unit
+
+.post-title
+  font-size: 42px
+  letter-spacing: -1px
+  line-height: 1
+  +media-query($on-laptop)
+    font-size: 36px
+
+.post-content
+  margin-bottom: $spacing-unit
+  h2
+    font-size: 32px
+    +media-query($on-laptop)
+      font-size: 28px
+  h3
+    font-size: 26px
+    +media-query($on-laptop)
+      font-size: 22px
+  h4
+    font-size: 20px
+    +media-query($on-laptop)
+      font-size: 18px
+
+ul
+  list-style-type: none

@@ -1,0 +1,66 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8"
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif
+$base-font-size: 16px
+$small-font-size: $base-font-size * 0.875
+$base-line-height: 1.5
+
+$spacing-unit: 30px
+
+$brand-color: black
+
+$background-color: white
+
+// Blue background, used on About page
+$text-color: black
+$blue-background: #669999
+$dark-blue: #226666
+
+// Red background, used on Interests page
+$text-color: black
+// $red-background: #FFAAAA
+// $red-background: #AA3939
+$red-background: #D46A6A
+$dark-red: #550000
+
+// Green background, used on Projects page
+$text-color: black
+// $green-background: #D4EE9F
+// $green-background: #7B9F35
+$green-background: #A5C663
+$dark-green: #354F00
+
+// Off-white
+$white-color: #FAEBD7
+$border-color: $white-color
+
+$grey-color: #828282
+$grey-color-light: lighten($grey-color, 40%)
+$grey-color-dark: darken($grey-color, 25%)
+
+// Width of the content area
+$content-width: 800px
+
+$on-palm: 600px
+$on-laptop: 800px
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+=media-query($device)
+  @media screen and (max-width: $device)
+    @content
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+@import base
+@import layout
+@import syntax-highlighting
