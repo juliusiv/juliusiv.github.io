@@ -21,10 +21,10 @@ function set_tab_color(title) {
 
 function set_content_color(title) {
   if(title === "about") {
-    $(".page-content").css("background-color", blue_bg);
+    $("body").css("background-color", blue_bg);
   } else if (title === "interests") {
-    $(".page-content").css("background-color", red_bg);
+    $("body").css("background-color", red_bg);
   } else if (title === "projects") {
-    $(".page-content").css("background-color", green_bg);
+    $("body").css("background-color", green_bg);
   }  
 }

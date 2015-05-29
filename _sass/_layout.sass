@@ -3,8 +3,9 @@
  */
 .site-header
   // Positioning context for the mobile navigation icon
-  position: relative
+  // position: relative
   background-color: $background-color
+  display: block
 
 .site-title
   font-size: 26px
@@ -19,7 +20,6 @@
 .site-nav
   float: right
   overflow: hidden
-  height: 100%
   width: 50%
   display: table-row
   ul
@@ -85,41 +85,19 @@
 /**
  ** Site footer
  */
-.site-footer  
-  padding: $spacing-unit 0
+.site-footer
+  padding: 1em 0 0 0
   background-color: $background-color
-
-.footer-heading
-  font-size: 18px
-  margin-bottom: $spacing-unit / 2
-
-.contact-list,
-.social-media-list
-  list-style: none
-  margin-left: 0
-
-.footer-col-wrapper
-  font-size: 15px
+  min-height: 2em
+  min-width: 100%
+  // margin: 1em
+  // display: block
+  position: absolute
+  bottom: 0
   color: $text-color
-  margin-left: -$spacing-unit / 2
   @extend %clearfix
-
-.footer-col
-  float: left
-  margin-bottom: $spacing-unit / 2
-  padding-left: $spacing-unit / 2
-
-.footer-col-1
-  width: -webkit-calc(30% - (#{$spacing-unit} / 2))
-  width: calc(30% - (#{$spacing-unit} / 2))
-
-.footer-col-2
-  width: -webkit-calc(25% - (#{$spacing-unit} / 2))
-  width: calc(25% - (#{$spacing-unit} / 2))
-
-.footer-col-3
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2))
-  width: calc(45% - (#{$spacing-unit} / 2))
+  text-align: center
+  display: block
 
 +media-query($on-laptop)
   .footer-col-1,
@@ -142,10 +120,20 @@
  ** Page content
  */
 .page-content
-  border-top: 4px solid $border-color
-  border-bottom: 4px solid $border-color
+  // border-top: 4px solid $border-color
+  // border-bottom: 4px solid $border-color
   padding: $spacing-unit 0
-  background-color: $background-color
+  padding-bottom: 3em
+  background-color: transparent
+  // background-color: $background-color
+
+.headshot
+  float: left
+  margin-right: 1.5em
+  border-radius: $radius /* future proofing */
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -khtml-border-radius: $radius /* for old Konqueror browsers */
 
 .page-heading
   font-size: 20px
@@ -163,6 +151,38 @@
 .post-link
   display: block
   font-size: 24px
+
+#projects-section
+  $count: 2
+  $gap: .25em
+  -webkit-column-count: $count
+  -webkit-column-gap: $gap
+  -moz-column-count: $count
+  -moz-column-gap: $gap
+  column-count: $count
+  column-gap: $gap
+
+.project-pic
+  position: relative
+  background-color: white
+  margin-bottom: .25em
+  // img
+
+.project-pic:hover .project-text
+  visibility: visible
+
+.project-text
+  position: absolute
+  width: 100%
+  text-align: center
+  font-size: 1.5em
+  z-index: 1
+  top: 50%
+  visibility: hidden
+  span
+    background: rgba(255, 255, 255, 0.7)
+    padding: .5em
+    background-radius: $radius
 
 /**
  ** Posts

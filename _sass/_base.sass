@@ -8,16 +8,25 @@ dl, dd, ol, ul, figure
   margin: 0
   padding: 0
 
+html
+  height: 100%
+
 // Basic styling
 body
   font-family: $base-font-family
   font-size: $base-font-size
   line-height: $base-line-height
   font-weight: 300
+  min-height: 100%
   color: $text-color
-  background-color: $background-color
+  background: $white-color
+  // background: linear-gradient(to right, $red-background 33%, $blue-background 33%, $blue-background 66%, $green-background 66%)
+
   -webkit-text-size-adjust: 100%
-  overflow-y: scroll
+  margin: 0
+  padding: 0
+  position: relative
+
 
 // Set `margin-bottom` to maintain vertical rhythm
 
@@ -31,6 +40,10 @@ ul, ol, dl, figure,
 img
   max-width: 100%
   vertical-align: middle
+  border-radius: $radius /* future proofing */
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -khtml-border-radius: $radius /* for old Konqueror browsers */
 
 // Figures
 figure > img
@@ -56,11 +69,13 @@ h1, h2, h3, h4, h5, h6
 a
   color: $brand-color
   text-decoration: none
-  &:visited
-    color: darken($brand-color, 15%)
   &:hover
-    color: $text-color
+    color: $brand-color
     text-decoration: underline
+
+.inline-a
+  color: $white-color
+  text-decoration: none
 
 // Blockquotes
 blockquote
@@ -101,7 +116,6 @@ pre
   padding-right: $spacing-unit
   padding-left: $spacing-unit
   overflow: hidden
-  position: relative
   @extend %clearfix
   +media-query($on-laptop)
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}))
