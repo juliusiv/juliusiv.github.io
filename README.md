@@ -1,2 +1,2 @@
 # JuliusAlexanderIV.github.io
-Personal website made with Jekyll (and love).
+Personal website made with Jekyll.

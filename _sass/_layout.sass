@@ -4,8 +4,10 @@
   color: $green-background
 .blue
   color: $blue-background
-.resume
+.resume:hover
   text-decoration: underline
+.bold
+  font-weight: bold
 
 .home
   position: relative
@@ -44,7 +46,7 @@
   float: left
   &,
   &:visited
-    color: $grey-color-dark
+    color: $grey-color-darkest
 
 .site-nav
   float: right
@@ -85,7 +87,7 @@
     top: 9px
     right: 30px
     background-color: $background-color
-    border: 1px solid $grey-color-light
+    border: 1px solid $grey-color-lighter
     border-radius: 5px
     text-align: right
     .menu-icon
@@ -100,7 +102,7 @@
         width: 18px
         height: 15px
         path
-          fill: $grey-color-dark
+          fill: $grey-color-darkest
     .trigger
       clear: both
       display: none
@@ -114,19 +116,24 @@
 /**
  ** Site footer
  */
-.site-footer
+#site-footer
   padding: 1em 0 0 0
-  background-color: $background-color
+  background-color: $grey-color-darkest
   min-height: 2em
   min-width: 100%
   // margin: 1em
   // display: block
   position: absolute
   bottom: 0
-  color: $text-color
+  color: $white-color
   @extend %clearfix
   text-align: center
-  display: block
+  p
+    display: inline
+    padding-right: 1em
+    padding-left: 1em
+  .border
+    border-right: 2px solid $white-color
 
 +media-query($on-laptop)
   .footer-col-1,

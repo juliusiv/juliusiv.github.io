@@ -3,7 +3,7 @@ title: Julius Alexander IV
 email: your-email@domain.com
 # > means to ignore newlines until "baseurl:"
 description: >
-  This site was built with Jekyll, foraged knowledge, and love.
+  This site was built with Jekyll and foraged knowledge.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://localhost:4000" # the base hostname & protocol for your site
