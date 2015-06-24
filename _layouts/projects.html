@@ -14,10 +14,12 @@ layout: default
   <section id="projects-section">
   {% for project in site.projects %}
     <figure class="project-pic">
-      <a href="{{ project.permalink }}.html">
-
-        <img src="../assets/{{ project.shorthand }}.png" alt="{{ project.title }}"/>
-        <figcaption class="project-text"><span>{{ project.title }}</span></figcaption>
+      <a href="{{ project.url }}">
+        <img src="../assets/{{ project.shorthand }}.png"
+          alt="{{ project.title }}"/>
+        <figcaption class="project-text">
+          <span>{{ project.title }}</span>
+        </figcaption>
       </a>
     </figure>
   {% endfor %}

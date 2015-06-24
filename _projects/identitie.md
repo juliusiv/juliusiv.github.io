@@ -1,7 +1,6 @@
 ---
 title: "Identitie"
 shorthand: "identitie"
-permalink: /projects/identitie
 layout: default
 ---
 My first hackathon was Hack Upstate in the Fall of 2013. Running through the entire design process for a piece of software was completely new and daunting for me. Admittedly, it still is pretty daunting. But Hack Upstate was my first exposure to the art of the hack, and Identitie was what we created.

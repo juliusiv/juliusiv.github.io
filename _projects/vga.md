@@ -1,7 +1,6 @@
 ---
 title: "VGA Output"
 shorthand: "vga"
-permalink: /projects/vga
 layout: default
 ---
 The goal for this project was simple but it wasn't easy to accomplish. We wanted to display images on a CRT by actually creating software and hardware to implement the VGA protocol. Initially we thought we might be able to actually display a picture on the terminal. When it was clear that that was probably not going to happen we settled on a fuzzy, multi-colored ball that bounced around the screen.

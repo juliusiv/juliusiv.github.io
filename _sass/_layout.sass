@@ -19,6 +19,7 @@
   height: 100%
   top: 0
   left: 0
+  cursor: pointer
 
 .posts
   text-align: left
@@ -29,9 +30,9 @@
   right: 0
   z-index: 1
 
-/**
- ** Site header
- */
+// 
+// Site header
+//
 .site-header
   // Positioning context for the mobile navigation icon
   // position: relative
@@ -113,9 +114,9 @@
       display: block
       padding: 5px 10px
 
-/**
- ** Site footer
- */
+//
+// Site footer
+//
 #site-footer
   padding: 1em 0 0 0
   background-color: $grey-color-darkest
@@ -152,9 +153,9 @@
     width: calc(100% - (#{$spacing-unit} / 2))
 
 
-/**
- ** Page content
- */
+//
+// Page content
+// 
 .page-content
   // border-top: 4px solid $border-color
   // border-bottom: 4px solid $border-color
@@ -203,7 +204,6 @@
   position: relative
   background-color: white
   margin-bottom: .25em
-  // img
 
 .project-pic:hover .project-text
   visibility: visible
@@ -221,9 +221,9 @@
     padding: .5em
     background-radius: $radius
 
-/**
- ** Posts
- */
+//
+// Posts
+// 
 .post-header
   margin-bottom: $spacing-unit
 
@@ -251,3 +251,14 @@
 
 ul
   list-style-type: none
+
+// Raindrop
+.droplet
+  border-bottom-right-radius: 90%
+  border-bottom-left-radius: 90%
+  border-top-left-radius: 90%
+  -webkit-transform: rotate(-45deg)
+  opacity: 1.0
+  height: 15px
+  width: 15px
+  position: fixed

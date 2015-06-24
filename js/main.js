@@ -5,6 +5,15 @@ var green_bg = "#A5C663";
 
 $(document).ready(function() {
   var title = $(document).find("title").text().toLowerCase();
+  var url = document.URL.split('/');
+
+  var title = "";
+  for (var i = 0; i < url.length; i++) {
+    if (url[i] === "about" || url[i] === "interests" || url[i] === "projects") {
+      title = url[i];
+      break;
+    }
+  }
   set_tab_color(title);
   set_content_color(title);
 });
