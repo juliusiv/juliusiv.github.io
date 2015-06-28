@@ -157,20 +157,14 @@
 // Page content
 // 
 .page-content
-  // border-top: 4px solid $border-color
-  // border-bottom: 4px solid $border-color
   padding: $spacing-unit 0
   padding-bottom: 3em
   background-color: transparent
-  // background-color: $background-color
 
 .headshot
   float: left
   margin-right: 1.5em
-  border-radius: $radius /* future proofing */
-  -moz-border-radius: $radius
-  -webkit-border-radius: $radius
-  -khtml-border-radius: $radius /* for old Konqueror browsers */
+  max-width: 15em
 
 .page-heading
   font-size: 20px
@@ -191,7 +185,7 @@
   font-size: 24px
 
 #projects-section
-  $count: 2
+  $count: 3
   $gap: .25em
   -webkit-column-count: $count
   -webkit-column-gap: $gap
@@ -201,9 +195,11 @@
   column-gap: $gap
 
 .project-pic
+  // max-height: 10em
+  // max-width: 10em
   position: relative
   background-color: white
-  margin-bottom: .25em
+  margin-bottom: 0.25em
 
 .project-pic:hover .project-text
   visibility: visible

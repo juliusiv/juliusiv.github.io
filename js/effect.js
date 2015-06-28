@@ -23,7 +23,7 @@ $(document).ready(function() {
 function animation() {
   console.log("There's a storm a-brewin'!")
   var max = 1000;
-  var min = 500;
+  var min = 200;
 
   (function loop() {
     var wait = Math.floor(Math.random()*(max-min)) + min;
