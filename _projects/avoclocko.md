@@ -1,7 +1,8 @@
 ---
 title: "Avoclock'o"
 shorthand: "avoclocko"
-layout: default
+layout: project
+summary: persistent alarm clock system
 ---
 Avoclock'o was designed during an intensive 10-week design course based around a simple premise: think of a problem and solve it. Our team realized that waking up in the morning is a challenge that hits close to home. College students are familiar with late nights and gruelling academics. We cherish our sleep and fear our smartphone alarms.
 

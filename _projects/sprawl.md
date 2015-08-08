@@ -1,7 +1,8 @@
 ---
 title: "sprawl"
 shorthand: "sprawl"
-layout: default
+layout: project
+summary: BitTorrent fueled webpage serving
 ---
 My second hackathon and second time at Hack Upstate. Hacks are always interesting to me because I don't feel like a terribly proficient web developer but these projects always seem to lean in that direction. Regardless, my interest in the area is always piqued when I leave and I always come away having learned something.
 

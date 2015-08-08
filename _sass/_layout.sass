@@ -1,260 +1,46 @@
-.red
-  color: $red-background
-.green
-  color: $green-background
-.blue
-  color: $blue-background
-.resume:hover
-  text-decoration: underline
-.bold
+.section
+  padding: 1.5rem
+
+#about
+  // background: -webkit-linear-gradient($blue-bg 90%, $clear-color)
+  // background: -o-linear-gradient($blue-bg 90%, $clear-color)
+  // background: -moz-linear-gradient($blue-bg 90%, $clear-color)
+  // background: linear-gradient($blue-bg 90%, $clear-color)
+  background-color: $blue-bg
+
+#interests
+  // background: -webkit-linear-gradient($red-bg 90%, $clear-color)
+  // background: -o-linear-gradient($red-bg 90%, $clear-color)
+  // background: -moz-linear-gradient($red-bg 90%, $clear-color)
+  // background: linear-gradient($red-bg 90%, $clear-color)
+  background-color: $red-bg
+
+#projects
+  // background: -webkit-linear-gradient($green-bg 90%, $clear-color)
+  // background: -o-linear-gradient($green-bg 90%, $clear-color)
+  // background: -moz-linear-gradient($green-bg 90%, $clear-color)
+  // background: linear-gradient($green-bg 90%, $clear-color)
+  background-color: $green-bg
+
+#blog
+  background-color: $yellow-bg
+
+a
+  text-decoration: none
+  color: white
   font-weight: bold
 
-.home
-  position: relative
-  height: 100%
+a:hover
+  font-style: italic
+  color: white
 
-#welcome
-  width: 50%
-  float: left
-  height: 100%
-  top: 0
-  left: 0
-  cursor: pointer
+.project-link
+  text-decoration: none
 
-.posts
-  text-align: left
-  float: left
-  width: 50%
-  height: 100%
-  top: 0
-  right: 0
-  z-index: 1
+.post
+  background-color: $yellow-bg
+  padding: 2rem
 
-// 
-// Site header
-//
-.site-header
-  // Positioning context for the mobile navigation icon
-  // position: relative
-  background-color: $background-color
-  display: block
-
-.site-title
-  font-size: 26px
-  line-height: 2em
-  letter-spacing: -1px
-  margin-bottom: 0
-  float: left
-  &,
-  &:visited
-    color: $grey-color-darkest
-
-.site-nav
-  float: right
-  overflow: hidden
-  width: 50%
-  display: table-row
-  ul
-    overflow: hidden
-    margin: 0
-    padding: 0
-    a
-      float: right
-      display: block
-      width: 33%
-      height: 3.5em
-      text-decoration: none
-      vertical-align: middle
-      li
-        margin-top: 1em
-        display: block
-        text-align: center
-        text-decoration: none
-    #about-link-box:hover, #about-link-box:active
-      background-color: $blue-background
-    #interests-link-box:hover, #interests-link-box:active
-      background-color: $red-background
-    #projects-link-box:hover, #projects-link-box:active
-      background-color: $green-background
-
-  .page-link
-    color: $text-color
-    line-height: $base-line-height
-    // Gaps between nav items, but not on the first one
-    &:not(:first-child)
-      margin-left: 20px
-  +media-query($on-palm)
-    position: absolute
-    top: 9px
-    right: 30px
-    background-color: $background-color
-    border: 1px solid $grey-color-lighter
-    border-radius: 5px
-    text-align: right
-    .menu-icon
-      display: block
-      float: right
-      width: 36px
-      height: 26px
-      line-height: 0
-      padding-top: 10px
-      text-align: center
-      > svg
-        width: 18px
-        height: 15px
-        path
-          fill: $grey-color-darkest
-    .trigger
-      clear: both
-      display: none
-    &:hover .trigger
-      display: block
-      padding-bottom: 5px
-    .page-link
-      display: block
-      padding: 5px 10px
-
-//
-// Site footer
-//
-#site-footer
-  padding: 1em 0 0 0
-  background-color: $grey-color-darkest
-  min-height: 2em
-  min-width: 100%
-  // margin: 1em
-  // display: block
-  position: absolute
-  bottom: 0
-  color: $white-color
-  @extend %clearfix
-  text-align: center
-  p
-    display: inline
-    padding-right: 1em
-    padding-left: 1em
-  .border
-    border-right: 2px solid $white-color
-
-+media-query($on-laptop)
-  .footer-col-1,
-  .footer-col-2
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2))
-    width: calc(50% - (#{$spacing-unit} / 2))
-  .footer-col-3
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2))
-    width: calc(100% - (#{$spacing-unit} / 2))
-
-
-+media-query($on-palm)
-  .footer-col
-    float: none
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2))
-    width: calc(100% - (#{$spacing-unit} / 2))
-
-
-//
-// Page content
-// 
-.page-content
-  padding: $spacing-unit 0
-  padding-bottom: 3em
-  background-color: transparent
-
-.headshot
-  float: left
-  margin-right: 1.5em
-  max-width: 15em
-
-.page-heading
-  font-size: 20px
-
-.post-list
-  position: relative
-  margin-left: 0
-  list-style: none
-  > li
-    margin-bottom: $spacing-unit
-
-.post-meta
-  font-size: $small-font-size
-  color: $grey-color
-
-.post-link
-  display: block
-  font-size: 24px
-
-#projects-section
-  $count: 3
-  $gap: .25em
-  -webkit-column-count: $count
-  -webkit-column-gap: $gap
-  -moz-column-count: $count
-  -moz-column-gap: $gap
-  column-count: $count
-  column-gap: $gap
-
-.project-pic
-  // max-height: 10em
-  // max-width: 10em
-  position: relative
-  background-color: white
-  margin-bottom: 0.25em
-
-.project-pic:hover .project-text
-  visibility: visible
-
-.project-text
-  position: absolute
-  width: 100%
-  text-align: center
-  font-size: 1.5em
-  z-index: 1
-  top: 50%
-  visibility: hidden
-  span
-    background: rgba(255, 255, 255, 0.7)
-    padding: .5em
-    background-radius: $radius
-
-//
-// Posts
-// 
-.post-header
-  margin-bottom: $spacing-unit
-
-.post-title
-  font-size: 42px
-  letter-spacing: -1px
-  line-height: 1
-  +media-query($on-laptop)
-    font-size: 36px
-
-.post-content
-  margin-bottom: $spacing-unit
-  h2
-    font-size: 32px
-    +media-query($on-laptop)
-      font-size: 28px
-  h3
-    font-size: 26px
-    +media-query($on-laptop)
-      font-size: 22px
-  h4
-    font-size: 20px
-    +media-query($on-laptop)
-      font-size: 18px
-
-ul
-  list-style-type: none
-
-// Raindrop
-.droplet
-  border-bottom-right-radius: 90%
-  border-bottom-left-radius: 90%
-  border-top-left-radius: 90%
-  -webkit-transform: rotate(-45deg)
-  opacity: 1.0
-  height: 15px
-  width: 15px
-  position: fixed
+.project
+  background-color: $green-bg
+  padding: 2rem

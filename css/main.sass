@@ -3,62 +3,33 @@
 ---
 @charset "utf-8"
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif
-$base-font-size: 16px
-$small-font-size: $base-font-size * 0.875
-$base-line-height: 1.5
-
-$spacing-unit: 30px
-
 $radius: .25em
+$precent-to-fade: 90%
 
-// Off-white
-$white-color: #FAEBD7
-$border-color: $white-color
-$background-color: $white-color
+$clear-color: rgba(255, 255, 255, 1.0)
 
-// Blue background, used on About page
-$blue-background: #669999
+// Blue bg, used on About page
+$blue-bg: #669999
 $dark-blue: #226666
 
-// Red background, used on Interests page
-// $red-background: #FFAAAA
-// $red-background: #AA3939
-$red-background: #D46A6A
+// Red bg, used on Interests page
+// $red-bg: #FFAAAA
+// $red-bg: #AA3939
+$red-bg: #D46A6A
 $dark-red: #550000
 
-// Green background, used on Projects page
-// $green-background: #7B9F35
-// $green-background: #D4EE9F
-$green-background: #A5C663
+// Green bg, used on Projects page
+// $green-bg: #7B9F35
+// $green-bg: #D4EE9F
+$green-bg: #A5C663
 $dark-green: #354F00
 
-$grey-color: #828282
-$grey-color-lighter: lighten($grey-color, 40%)
-$grey-color-darker: darken($grey-color, 25%)
-$grey-color-darkest: darken($grey-color, 45%)
+// Yellow bg for blog
+$yellow-bg: #F3C859
 
-$text-color: $grey-color-darkest
-// Width of the content area
-$content-width: 800px
-
-$on-palm: 600px
-$on-laptop: 800px
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-=media-query($device)
-  @media screen and (max-width: $device)
-    @content
+$red-link: #ff0000
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 
-@import base
 @import layout
 @import syntax-highlighting
