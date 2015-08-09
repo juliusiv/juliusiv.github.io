@@ -1,47 +1,12 @@
 ---
 layout: default
 ---
-<div id="about" class="four columns section">
-  <h4>yo:</h4>
-  <p>I'm a Senior Computer & Systems Engineering and Computer Science dual major at Rensselaer Polytechnic Institute. I originally hail from Bloomington, IL where I attended Bloomington High School. In my time there I was a trumpet section leader in the Marching Band, member of the Wind Symphony, Math Team, and Scholastic Bowl. Later, I became heavily involved in the drama department and played on the tennis team.</p>
+{% include about.html %}
 
-  <p>At RPI, I'm an active member of the Racquetball Team and was RPI's Google Student Ambassador sophomore year. Since my third semester, I've been a brother of Lambda Chi Alpha where I serve as the Standards Chair on the Executive Committee and the Webmaster. I am also a founding member and former committee chair of a successful student-run lecture series called <a href="http://rensselaertalks.com" class="inline-a">Rensselaer TALKS</a>.</p>
-
-  <p>Technically, I want to create systems that benefit users and the world. Python is my goto language for productivity due to its simplicity and clarity. Functional languages pique my interest as they provoke a change in mindset and provide computational security; Haskell has been my door into that world but I've recently been interested in Scala and Elixir.</p>
-</div>
-
-<div id="projects" class="four columns section">
-  <h4>creations:</h4>
-  <p>Here some of the things I've worked on over the last few years. Other, smaller things I've dinked around with are on <a href="https://github.com/{{ site.github_username }}" class="inline-a">GitHub</a>.</p>
-
-  <ul>
-    {% for project in site.projects %}
-    <li><a class="project-link" href="{{ project.url }}">{{ project.title }}</a> {{ project.summary }}</li>
-    {% endfor %}
-  </ul>
-</div>
+{% include projects.html %}
 
 <div class="four columns">
-  <div id="blog" class="section">
-    <h4>thoughts:</h4>
-    <ul>
-      {% for post in site.posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div id="interests" class="section">
-    <h4>likes:</h4>
-    <p>The best things:</p>
-    <ul>
-      <li>Breaking Bad</li>
-      <li>Stars of the Lid</li>
-      <li>Spirit of Eden & Laughing Stock</li>
-      <li>Slaughterhouse-Five</li>
+  {% include blog.html %}
 
-    </ul>
-  </div>
+  {% include interests.html %}  
 </div>
