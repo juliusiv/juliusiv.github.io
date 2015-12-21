@@ -1,16 +1,24 @@
-var blue_bg = "#669999";
-var red_bg = "#D46A6A";
-var green_bg = "#A5C663";
-var yellow_bg = "#F3C859";
-var colors = [blue_bg, red_bg, green_bg, yellow_bg];
+window.onload = function () {
+  theme = getTheme();
+  theme === undefined ? setTheme("default") : setTheme(theme);  
+};
 
-$(document).ready(function() {
-  $("#hire").hover(function() {
-    var color = colors[Math.floor(Math.random()*colors.length)];
-    $("#hire").css("background-color", color);
-    $("#hire").css("border-color", "#FFFFFF");
-  }, function() {
-    $("#hire").css("background-color", "#FFFFFF");
-    $("#hire").css("border-color", "#bbb");
-  });
-});
+function getTheme() {
+  var nameEQ = "theme=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+
+function setTheme(theme) {
+  // Set the logo
+  document.getElementById("logo").src = "/assets/logo_" + theme + ".png";
+  // Set the CSS
+  document.getElementById("theme-css").href = "/css/" + theme + ".css";
+  document.cookie = "theme=" + theme + ";";
+}

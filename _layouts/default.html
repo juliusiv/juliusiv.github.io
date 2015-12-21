@@ -4,14 +4,18 @@
 {% include head.html %}
 
 <body>
+  <script type="text/javascript" src="js/main.js" ></script>
 
   <div class="container">
     <div class="row content">
         <h1 id="site-title">
-          <!-- <img src="/assets/logo_default.png" alt="Logo"></img> -->
-          <img src="/assets/logo_sotl.png" alt="Logo"></img>
+          <img id="logo" src="/assets/logo_default.png" alt="Logo"></img>
 
           {{ site.title }}
+          <div id="homages">
+            <div id="theme-default" class="theme-symbol" onclick="setTheme('default')"></div>
+            <div id="theme-sotl" class="theme-symbol" onclick="setTheme('sotl')"></div>
+          </div>
         </h1>
     </div>
 
