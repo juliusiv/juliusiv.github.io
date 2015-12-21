@@ -1,6 +1,6 @@
 window.onload = function () {
   theme = getTheme();
-  theme === undefined ? setTheme("default") : setTheme(theme);  
+  theme === undefined || theme === null ? setTheme("default") : setTheme(theme);  
 };
 
 function getTheme() {
