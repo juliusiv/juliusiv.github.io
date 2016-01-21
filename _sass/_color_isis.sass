@@ -1,0 +1,55 @@
+$yellow-isis: #B29E61
+
+body
+  background-image: url("../assets/isis_bg.png")
+  color: $yellow-isis
+
+a .fa
+  color: black
+
+#about,
+#projects,
+#blog,
+#interests
+  background-color: $yellow-isis
+  color: black
+
+a,
+a:hover
+  color: white
+
+.project,
+.post
+  background-color: $yellow-isis
+  color: black
+
+#theme-default
+  -moz-box-shadow: inset 0 0 0 5px $yellow-isis
+  -webkit-box-shadow: inset 0 0 0 5px $yellow-isis
+  box-shadow: inset 0 0 0 5px $yellow-isis
+
+#theme-sotl
+  border-radius: 50%
+  -moz-box-shadow: inset 0 0 0 5px $yellow-isis
+  -webkit-box-shadow: inset 0 0 0 5px $yellow-isis
+  box-shadow: inset 0 0 0 5px $yellow-isis
+
+#theme-isis
+  // height: 10px
+  -moz-box-shadow: inset 0 0 0 3px $yellow-isis
+  -webkit-box-shadow: inset 0 0 0 3px $yellow-isis
+  box-shadow: inset 0 0 0 3px $yellow-isis
+  position: relative
+  display: inline-block
+
+#theme-isis:after,
+#theme-isis::after
+  position: absolute
+  border-top: 3px solid $yellow-isis
+  top: 30%
+  left: 0
+  right: 0
+  z-index: -1
+  content: ""
+// .theme-symbol:
+
