@@ -51,7 +51,17 @@ a:hover
   box-shadow: inset 0 0 0 5px black
 
 #theme-isis
-  // height: 10px
-  -moz-box-shadow: inset 0 0 0 5px black
-  -webkit-box-shadow: inset 0 0 0 5px black
-  box-shadow: inset 0 0 0 5px black
+  -moz-box-shadow: inset 0 0 0 3px black
+  -webkit-box-shadow: inset 0 0 0 3px black
+  box-shadow: inset 0 0 0 3px black
+  position: relative
+  display: inline-block
+#theme-isis:after,
+#theme-isis::after
+  position: absolute
+  border-top: 3px solid black
+  top: 30%
+  left: 0
+  right: 0
+  z-index: -1
+  content: ""
