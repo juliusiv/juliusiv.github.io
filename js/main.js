@@ -22,5 +22,5 @@ function setTheme(theme) {
   document.getElementById("logo").src = "/assets/logo_" + theme + ".png";
   // Set the CSS
   document.getElementById("theme-css").href = "/css/" + theme + ".css";
-  document.cookie = "theme=" + theme + ";";
+  document.cookie = "theme=" + theme + ";path=/;";
 }
