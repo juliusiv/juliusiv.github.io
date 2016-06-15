@@ -3,6 +3,12 @@ title: "Chrome Spellchecker"
 shorthand: "spellcheck"
 layout: project
 summary: multilingual spellchecking
+techs:
+  - chrome
+  - cpp
+  - css3
+  - html
+  - js
 ---
 For my internship at Google in the summer of 2015 I was assigned one of Chrome's oldest issues. Chrome was only able to spellcheck with one language at a time which meant that multilingual users were constantly switching back and forth between languages. Enter Julius to save the day.
 

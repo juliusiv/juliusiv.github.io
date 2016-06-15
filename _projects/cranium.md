@@ -1,8 +1,14 @@
 ---
-title: "cranium.css"
+title: "Cranium.css"
 shorthand: "cranium"
 layout: project
 summary: machine learned, uniquely tailored web UI
+techs:
+  - css3
+  - golang
+  - html
+  - js
+  - python
 ---
 cranium.css was the hardest, most ambitious hackathon project I've done.
 

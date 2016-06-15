@@ -1,25 +1,67 @@
-#preload-isis
-  background: url("../assets/isis_bg.png") no-repeat -9999px -9999px
+$section-spacing: 1.5rem
+
+body
+  font-family: "Computer Modern Serif"
+  color: black
+
+#site-title
+  text-transform: capitalize
+  font-variant: small-caps
 
 .section
-  padding: 1.5rem
+  padding: $section-spacing
   margin-bottom: 11.5%
+
+h4
+  background: white
+  padding-right: 0.5rem
+  display: inline
+
+.section-title>div
+  width: 100%
+  height: 2.5rem
+  border-bottom: 1px solid black
+@media (min-width: 400px)
+@media (min-width: 550px)
+  .section-title>div
+    height: 3rem
+
+ul li
+  list-style-position: outside
+  margin-left: $section-spacing
+
+.section-title
+  margin-bottom: 2rem
 
 #hire
   text-align: center
+#hire>a, .home-button
+  text-transform: capitalize
+  font-variant: small-caps
 
 a
   text-decoration: none
   font-weight: bold
+  color: black
+  cursor: pointer
 
 a:hover
-  font-style: italic
+  color: black
 
 .project-link
+  font-weight: bold
   text-decoration: none
+  font-style: italic
 
 .post
   padding: 2rem
+
+.post-meta
+  float: right
+  font-style: italic
+
+.post-link
+  font-style: italic
 
 .project
   padding: 2rem
@@ -27,41 +69,13 @@ a:hover
 #site-title
   margin-top: 2rem
 
-#site-title>img
-  width: 70px
-
-#homages
-  line-height: 1rem
-
-.theme-symbol
-  width: 20px
-  height: 20px
-  cursor: pointer
+.tech-list
   display: inline-block
+  margin: 0
 
-#theme-default
-  -moz-box-shadow: inset 0 0 0 5px black
-  -webkit-box-shadow: inset 0 0 0 5px black
-  box-shadow: inset 0 0 0 5px black
-
-#theme-sotl
-  border-radius: 50%
-  -moz-box-shadow: inset 0 0 0 5px black
-  -webkit-box-shadow: inset 0 0 0 5px black
-  box-shadow: inset 0 0 0 5px black
-
-#theme-isis
-  -moz-box-shadow: inset 0 0 0 3px black
-  -webkit-box-shadow: inset 0 0 0 3px black
-  box-shadow: inset 0 0 0 3px black
-  position: relative
+.tech-logo
   display: inline-block
-#theme-isis:after,
-#theme-isis::after
-  position: absolute
-  border-top: 3px solid black
-  top: 30%
-  left: 0
-  right: 0
-  z-index: -1
-  content: ""
+  margin-left: 0.25rem
+
+.tech-logo>img
+  max-height: 1.5rem
