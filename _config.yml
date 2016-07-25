@@ -7,7 +7,7 @@ description: >
 
 # relative_permalinks: true
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "http://juliusalexanderiv.github.io/" # the base hostname & protocol for your site
 twitter_username: JAlexanderIV
 github_username:  JuliusAlexanderIV
 
