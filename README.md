@@ -1,2 +1,2 @@
-# JuliusAlexanderIV.github.io
+# juliusiv.github.io
 Personal website made with Jekyll.

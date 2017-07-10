@@ -7,9 +7,9 @@ description: >
 
 # relative_permalinks: true
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://juliusalexanderiv.github.io/" # the base hostname & protocol for your site
+url: "http://juliusiv.github.io/" # the base hostname & protocol for your site
 twitter_username: JAlexanderIV
-github_username:  JuliusAlexanderIV
+github_username: juliusiv 
 
 permalink: /blog/:year/:month/:day/:title
 
