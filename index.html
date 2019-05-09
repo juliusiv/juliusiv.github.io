@@ -1,12 +1,117 @@
----
-layout: default
----
-{% include about.html %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% include projects.html %}
+<head>
 
-<div class="four columns">
-  {% include blog.html %}
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>julius</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  {% include interests.html %}
-</div>
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+  <!-- <link rel="icon" type="image/png" href="/assets/fav.png" sizes="32x32"> -->
+  <!-- <meta name="theme-color" content="#ffffff"> -->
+
+  <style>
+    .ml0 { margin-left: 0; }
+    .ml1 { margin-left: 1rem; }
+    .ml2 { margin-left: 2rem; }
+    .ml3 { margin-left: 3rem; }
+
+    .mt0 { margin-top: 0; }
+    .mt1 { margin-top: 1rem; }
+    .mt2 { margin-top: 2rem; }
+    .mt3 { margin-top: 3rem; }
+
+    .mb1 { margin-bottom: 1rem; }
+
+    .p3 { padding: 3rem; }
+
+    .block { display: block; }
+
+    .font-impact { font-family: "Anton", "impact", "arial black", "trebuchet ms", sans-serif; }
+    .font-mono { font-family: monospace; }
+    .font-didot { font-family: "didot", "palatino", serif; }
+    .font-large { font-size: 2rem; }
+    .italic { font-style: italic; }
+    .underline { text-decoration: underline; }
+    .bold { font-weight: bold; }
+
+    .pointer { cursor: pointer; }
+
+    .bg-seashell { background-color: seashell; }
+    .c-indianred { color: indianred; }
+    .c-black { color: #222222; }
+    .color-inherit { color: inherit; }
+
+    .max-width { max-width: 400px; }
+    .hidden { display: none; }
+
+    .before-p::before { content: "¶ "; }
+  </style>
+
+</head>
+
+<body class="bg-seashell p3 c-black">
+  <div class="container max-width">
+    <header class="font-impact font-large bold">
+      <div class="ml0">julius</div>
+      <div class="ml2">alexander</div>
+      <div class="ml1">iv</div>
+    </header>
+
+    <div class="mt2 block">
+      <div class="font-didot italic" id="quote-section"></div>
+    </div>
+
+    <div class="font-mono block mt2 c-indianred">
+      <div>
+        <span class="color-inherit underline pointer" onclick="toggleSynopsis()">&there4; synopsis</span>
+        <div class="hidden ml1 c-black mb1" id="synopsis-section">
+          <p class="before-p">I like to boulder, scuba dive, and also snowboard. Here is some other placeholder text.</p>
+          <p class="before-p">Sometimes I do other things too.</p>
+        </div>
+      </div>
+      <div>
+        <a class="color-inherit" href="https://www.notion.so/juliusiv/89d1d2438e53440ea963fdd6230ad670?v=826db3260aa34e279829ebe4ff1494d6">&iquest; thoughts</a>
+      </div>
+      <div>
+        <a class="color-inherit ml3" href="https://www.notion.so/juliusiv/4b4cb4eba7244048b275c641e56e56db?v=2e00a7a61c66412887969bddb92d8e66">&copy; works</a>
+      </div>
+    </div>
+
+    <div class="font-mono block mt2 c-indianred">
+      <div>
+        <a class="color-inherit ml2" href="https://github.com/juliusiv">{ code }</a>
+      </div>
+      <div>
+        <a class="color-inherit ml1" href="https://www.linkedin.com/in/julius-alexander-iv-95a56061/">$ résumé</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  const QUOTES = [
+    `"But the clock over the bar only clicks once, then presently again, ratcheting time minutewise into their past."`,
+  ];
+
+  const randomQuote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+  document.getElementById("quote-section").innerHTML = randomQuote;
+
+  const toggleSynopsis = () => {
+    const synopsisSection = document.getElementById("synopsis-section");
+    if (synopsisSection.className.includes("hidden")) {
+      synopsisSection.className = synopsisSection.className.replace("hidden", "");
+    } else {
+      synopsisSection.className = `${synopsisSection.className} hidden`;
+    }
+  }
+</script>
+</html>

@@ -1,2 +1,1 @@
-# juliusiv.github.io
-Personal website made with Jekyll.
+[juliusiv.github.io](https://juliusiv.github.io)
