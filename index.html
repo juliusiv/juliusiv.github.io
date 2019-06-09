@@ -99,12 +99,20 @@
 
 <script type="text/javascript">
   const QUOTES = [
-    `"But the clock over the bar only clicks once, then presently again, ratcheting time minutewise into their past."`,
-    `"I think that in modern America, we have far too many options for breakfast cereal and not enough options for president."`,
+    {
+      quote: `"But the clock over the bar only clicks once, then presently again, ratcheting time minutewise into their past."`,
+      popupText: "Thomas Pynchon - Gravity's Rainbow",
+    },
+    {
+      quote: `"I think that in modern America, we have far too many options for breakfast cereal and not enough options for president."`,
+      popupText: "Barry Schwartz - The Paradox of Choice",
+    },
   ];
 
   const randomQuote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
-  document.getElementById("quote-section").innerHTML = randomQuote;
+  const quoteSection = document.getElementById("quote-section");
+  quoteSection.innerHTML = randomQuote.quote;
+  quoteSection.title = randomQuote.popupText;
 
   const toggleSynopsis = () => {
     const synopsisSection = document.getElementById("synopsis-section");
