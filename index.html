@@ -30,6 +30,8 @@
 
     .mb1 { margin-bottom: 1rem; }
 
+    .mr1 { margin-right: 1rem; }
+
     .p3 { padding: 3rem; }
 
     .block { display: block; }
@@ -41,6 +43,7 @@
     .italic { font-style: italic; }
     .underline { text-decoration: underline; }
     .bold { font-weight: bold; }
+    .text-dec-none { text-decoration: none; }
 
     .cursor-pointer { cursor: pointer; }
     .cursor-help { cursor: help; }
@@ -54,6 +57,8 @@
     .hidden { display: none; }
 
     .before-p::before { content: "¶ "; }
+
+    .highlight:hover { background: indianred; color: seashell; }
   </style>
 
 </head>
@@ -72,26 +77,42 @@
 
     <div class="font-mono block mt2 c-indianred">
       <div>
-        <span class="color-inherit underline cursor-pointer" onclick="toggleSynopsis()">&there4; synopsis</span>
+        <span class="color-inherit underline cursor-pointer" onclick="toggleSection('synopsis-section')">&there4; synopsis</span>
         <div class="hidden ml1 c-black mb1" id="synopsis-section">
           <p class="before-p">I like to boulder, scuba dive, and also snowboard. Here is some other placeholder text.</p>
           <p class="before-p">Sometimes I do other things too.</p>
         </div>
       </div>
       <div>
-        <a class="color-inherit" href="https://www.notion.so/juliusiv/89d1d2438e53440ea963fdd6230ad670?v=826db3260aa34e279829ebe4ff1494d6">&iquest; thoughts</a>
+        <a class="color-inherit" href="https://www.notion.so/juliusiv/89d1d2438e53440ea963fdd6230ad670?v=826db3260aa34e279829ebe4ff1494d6" target="_blank">
+          &iquest; thoughts
+        </a>
       </div>
       <div>
-        <a class="color-inherit ml3" href="https://www.notion.so/juliusiv/4b4cb4eba7244048b275c641e56e56db?v=2e00a7a61c66412887969bddb92d8e66">&copy; works</a>
+        <a class="color-inherit ml3" href="https://www.notion.so/juliusiv/4b4cb4eba7244048b275c641e56e56db?v=2e00a7a61c66412887969bddb92d8e66" target="_blank">
+          &copy; works
+        </a>
       </div>
     </div>
 
     <div class="font-mono block mt2 c-indianred">
       <div>
-        <a class="color-inherit ml2" href="https://github.com/juliusiv">{ code }</a>
+        <a class="color-inherit ml2" href="https://github.com/juliusiv" target="_blank">
+          { code }
+        </a>
       </div>
       <div>
-        <a class="color-inherit ml1" href="https://www.linkedin.com/in/julius-alexander-iv-95a56061/">$ résumé</a>
+        <span class="color-inherit underline cursor-pointer" onclick="toggleSection('resume-section')">$ résumé</span>
+        <span class="hidden mr1" id="resume-section">
+          &#8212;
+          <a class="color-inherit ml1 highlight text-dec-none" href="https://www.linkedin.com/in/julius-alexander-iv-95a56061/" target="_blank">
+            linkedin
+          </a>
+          ,
+          <a class="color-inherit highlight text-dec-none" href="http://juliusiv.github.io/resume" target="_blank">
+            pdf
+          </a>
+        </span>
       </div>
     </div>
   </div>
@@ -129,6 +150,15 @@
       synopsisSection.className = synopsisSection.className.replace("hidden", "");
     } else {
       synopsisSection.className = `${synopsisSection.className} hidden`;
+    }
+  }
+
+  const toggleSection = elementId => {
+    const section = document.getElementById(elementId);
+    if (section.className.includes("hidden")) {
+      section.className = section.className.replace("hidden", "");
+    } else {
+      section.className = `${section.className} hidden`;
     }
   }
 </script>
