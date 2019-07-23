@@ -42,7 +42,8 @@
     .underline { text-decoration: underline; }
     .bold { font-weight: bold; }
 
-    .pointer { cursor: pointer; }
+    .cursor-pointer { cursor: pointer; }
+    .cursor-help { cursor: help; }
 
     .bg-seashell { background-color: seashell; }
     .c-indianred { color: indianred; }
@@ -66,12 +67,12 @@
     </header>
 
     <div class="mt2 block">
-      <div class="font-didot italic" id="quote-section"></div>
+      <div class="font-didot italic cursor-help" id="quote-section"></div>
     </div>
 
     <div class="font-mono block mt2 c-indianred">
       <div>
-        <span class="color-inherit underline pointer" onclick="toggleSynopsis()">&there4; synopsis</span>
+        <span class="color-inherit underline cursor-pointer" onclick="toggleSynopsis()">&there4; synopsis</span>
         <div class="hidden ml1 c-black mb1" id="synopsis-section">
           <p class="before-p">I like to boulder, scuba dive, and also snowboard. Here is some other placeholder text.</p>
           <p class="before-p">Sometimes I do other things too.</p>
@@ -101,11 +102,19 @@
   const QUOTES = [
     {
       quote: `"But the clock over the bar only clicks once, then presently again, ratcheting time minutewise into their past."`,
-      popupText: "Thomas Pynchon - Gravity's Rainbow",
+      popupText: "Thomas Pynchon just knows how to say things",
     },
     {
       quote: `"I think that in modern America, we have far too many options for breakfast cereal and not enough options for president."`,
-      popupText: "Barry Schwartz - The Paradox of Choice",
+      popupText: "Barry Schwartz on when some extra choice maybe isn't so bad",
+    },
+    {
+      quote: `"A squid eating dough in a polyethylene bag is fast and bulbous. Got me?"`,
+      popupText: "Captain Beefheart, talking about godknowswhat",
+    },
+    {
+      quote: `"Every day, once a day, give yourself a present. Don’t plan it, don’t wait for it, just let it happen."`,
+      popupText: "Agent Cooper's wise wise advice",
     },
   ];
 
